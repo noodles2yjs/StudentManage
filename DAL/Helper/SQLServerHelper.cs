@@ -73,7 +73,7 @@ namespace DAL
         /// </summary>
         /// <param name="sql"></param>
         /// <returns></returns>
-        public static object GetReader(string sql)
+        public static SqlDataReader GetReader(string sql)
         {
             using (SqlConnection sqlConnection = new SqlConnection(ConnString))
             {

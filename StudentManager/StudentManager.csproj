@@ -121,6 +121,12 @@
     <Compile Include="FrmStudentInfo.designer.cs">
       <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="FrmStudentInfo.resx">
       <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUserLogin.resx">
       <DependentUpon>FrmUserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +205,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{e725276b-253b-4f87-9ae5-bf263306f246}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{83eb34e9-73ec-4af1-a238-5b136335310c}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
