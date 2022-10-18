@@ -12,6 +12,10 @@ namespace Models
     [Serializable]
     public class Attendance
     {
+        public int Id { get; set; }
+        public string CarNo { get; set; }
+        public DateTime? Dtime { get; set; }
+
 
     }
 }

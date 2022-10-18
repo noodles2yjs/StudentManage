@@ -12,5 +12,11 @@ namespace Models
     [Serializable]
     public class Score
     {
+        public int Id { get; set; }
+        public int StudentId { get; set; }
+        public int Csharp { get; set; }
+        public int SQLServerDB { get; set; }
+        public DateTime? UpdateTime { get; set; }
+
     }
 }

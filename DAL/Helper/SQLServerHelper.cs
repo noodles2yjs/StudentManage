@@ -81,7 +81,7 @@ namespace DAL
                 {
                     try
                     {
-                        sqlConnection.Open();
+                        sqlConnection.Open(); 
                         return sqlCommand.ExecuteReader();
                     }
                     catch (Exception ex)

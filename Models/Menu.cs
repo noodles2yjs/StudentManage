@@ -12,6 +12,10 @@ namespace Models
     [Serializable]
     public class Menu
     {
+        public int MenuId { get; set; }
+        public string MenuName { get; set; }
+        public string MenuCode { get; set; }
+        public int ParentId { get; set; }
 
     }
 }
