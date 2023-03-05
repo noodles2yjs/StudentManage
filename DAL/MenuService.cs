@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace DAL
 {
     /// <summary>
-    /// Students 服务类
-    /// </summary>
+    /// MenuList 服务类
+    /// </summary|>
 
-    public class StudentService
+    public class MenuService
     {
 
     }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace DAL
 {
     /// <summary>
     /// ScoreList 服务类
     /// </summary>
-    [Serializable]
+   
     public class ScoreService
     {
     }

@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace DAL
+
 {
     /// <summary>
     ///  Attendance 服务类

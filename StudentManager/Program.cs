@@ -36,7 +36,6 @@ namespace StudentManager
             }
 
            
-
         }
         // 声明用户信息的全局变量
         public static SysAdmin CurrentAdmin = null;

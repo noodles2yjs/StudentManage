@@ -75,21 +75,19 @@ namespace DAL
         /// <returns></returns>
         public static SqlDataReader GetReader(string sql)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(ConnString))
+            SqlConnection conn = new SqlConnection(ConnString);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
             {
-                using (SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection))
-                {
-                    try
-                    {
-                        sqlConnection.Open(); 
-                        return sqlCommand.ExecuteReader();
-                    }
-                    catch (Exception ex)
-                    {
-
-                        throw ex;
-                    }
-                }
+                conn.Open();
+                SqlDataReader objReader =
+                    cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                return objReader;
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                throw ex;
             }
 
 

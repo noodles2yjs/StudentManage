@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E725276B-253B-4F87-9AE5-BF263306F246}</ProjectGuid>
+    <ProjectGuid>{3C1E518C-2414-499D-9C8E-CDB5548FAE6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,20 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttendanceService.cs" />
-    <Compile Include="Helper\SQLHelper.cs" />
-    <Compile Include="MenuService.cs" />
-    <Compile Include="Helper\OLEDBHelper.cs" />
+    <Compile Include="StudentManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScoreService.cs" />
-    <Compile Include="Helper\SQLServerHelper.cs" />
-    <Compile Include="StudentService.cs" />
-    <Compile Include="StudentClassService.cs" />
-    <Compile Include="SysAdminService.cs" />
+    <Compile Include="StudentClassManage.cs" />
+    <Compile Include="SysAdminManage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{e725276b-253b-4f87-9ae5-bf263306f246}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{83eb34e9-73ec-4af1-a238-5b136335310c}</Project>
+      <Project>{83EB34E9-73EC-4AF1-A238-5B136335310C}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
