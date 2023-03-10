@@ -168,5 +168,10 @@ namespace StudentManager
         {
             this.Close();
         }
+
+        private void dgvStudentList_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            Common.DataGridViewStyle.DgvRowPostPaint(this.dgvStudentList, e);
+        }
     }
 }

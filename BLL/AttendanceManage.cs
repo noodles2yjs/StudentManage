@@ -31,9 +31,16 @@ namespace BLL
             return service.GetStudentByCardNo(cardNo);
         }
 
+      
+
         public List<Student> GetAttendanceStudentList(DateTime dt, bool isToday)
         {
             return service.GetAttendanceStudentList(dt, isToday);
+        }
+
+        public List<Student> GetAttendanceStudentList(DateTime dt1, DateTime dt2, string stuName)
+        {
+          return  service.GetAttendanceStudentList(dt1, dt2, stuName);
         }
     }
 }

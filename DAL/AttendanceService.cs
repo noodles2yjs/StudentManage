@@ -131,6 +131,41 @@ namespace DAL
             return student;
         }
 
+
+        private Student GetStudent(string whereSql)
+        {
+            string sql = "select StudentId,StudentName, Gender, Birthday, StudentIdNo, CardNo,Age, PhoneNumber, StuImage,StudentAddress, ClassName,StudentClass.ClassId from  Students inner join StudentClass on  StudentClass.ClassId =Students.ClassId ";
+            sql += whereSql;
+       
+            SqlDataReader reader = SQLHelper.ExecuteReader(sql);
+            Student student = new Student();
+            if (reader.Read())
+            {
+
+                student.StudentId = Convert.ToInt32(reader["StudentId"]);
+                student.StudentName = reader["StudentName"].ToString();
+                student.Gender = reader["Gender"].ToString();
+                student.Birthday = Convert.ToDateTime(reader["Birthday"]);
+                student.StudentIdNo = Convert.ToString(reader["StudentIdNo"]);
+                student.CardNo = Convert.ToString(reader["CardNo"]);
+                student.Age = Convert.ToInt32(reader["Age"]);
+                student.PhoneNumber = Convert.ToString(reader["PhoneNumber"]);
+                student.StudentAddress = Convert.ToString(reader["StudentAddress"]);
+                student.ClassId = Convert.ToInt32(reader["ClassId"]);
+                student.ClassName = reader["ClassName"].ToString();
+                // student.StuImage = reader["StuImage"].ToString();
+                student.StuImage = reader["StuImage"] == null ? "" : reader["StuImage"].ToString();
+            }
+            else
+            {
+                student = null;
+            }
+
+            reader.Close();
+
+            return student;
+        }
+
         // 根据时间获得考勤学生列表
 
         public List<Student> GetAttendanceStudentList(DateTime dt, bool isToday)
@@ -171,6 +206,52 @@ namespace DAL
                                  StudentId = Convert.ToInt32(reader["StudentId"]),
                                  StudentName = reader["StudentName"].ToString(),
                                  Gender  = reader["Gender"].ToString(),
+                                 CardNo = reader["CardNo"].ToString(),
+                                 ClassName = reader["ClassName"].ToString(),
+                                 DTime = Convert.ToDateTime(reader["DTime"]),
+                             }
+                        );
+                }
+                reader.Close();
+                return studentList;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
+
+        public List<Student> GetAttendanceStudentList(DateTime dt1, DateTime dt2,string stuName)
+        {
+           
+
+            string sql = " select distinct(StudentId),StudentName, Gender, Students.CardNo, ClassName,DTime  from  Students\r\n  inner join StudentClass on  StudentClass.ClassId =Students.ClassId\r\n  inner join Attendance on Students.CardNo=Attendance.CardNo where DTime between @dt1 and @dt2 and StudentName=@StudentName";
+
+            SqlParameter[] sqlParameters = new SqlParameter[]
+           {
+                new SqlParameter("@dt1",dt1),
+                new SqlParameter("@dt2",dt2),
+                new SqlParameter("@StudentName",stuName),
+           };
+
+            try
+            {
+                SqlDataReader reader = SQLHelper.ExecuteReader(sql, sqlParameters);
+
+                List<Student> studentList = new List<Student>();
+
+                while (reader.Read())
+                {
+                    studentList.Add
+                        (
+                             new Student
+                             {
+                                 StudentId = Convert.ToInt32(reader["StudentId"]),
+                                 StudentName = reader["StudentName"].ToString(),
+                                 Gender = reader["Gender"].ToString(),
                                  CardNo = reader["CardNo"].ToString(),
                                  ClassName = reader["ClassName"].ToString(),
                                  DTime = Convert.ToDateTime(reader["DTime"]),

@@ -70,14 +70,14 @@
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTime.Location = new System.Drawing.Point(59, 67);
             this.dtpTime.Name = "dtpTime";
-            this.dtpTime.Size = new System.Drawing.Size(85, 21);
+            this.dtpTime.Size = new System.Drawing.Size(103, 21);
             this.dtpTime.TabIndex = 1;
             // 
             // btnQuery
             // 
             this.btnQuery.Image = ((System.Drawing.Image)(resources.GetObject("btnQuery.Image")));
             this.btnQuery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuery.Location = new System.Drawing.Point(292, 61);
+            this.btnQuery.Location = new System.Drawing.Point(310, 61);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(84, 33);
             this.btnQuery.TabIndex = 3;
@@ -185,7 +185,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 71);
+            this.label2.Location = new System.Drawing.Point(168, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 0;
@@ -193,7 +193,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(186, 67);
+            this.txtName.Location = new System.Drawing.Point(204, 68);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 21);
             this.txtName.TabIndex = 5;
