@@ -264,7 +264,11 @@ namespace DAL
 
             return student;
         }
-
+        /// <summary>
+        /// 修改操作
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
         public int ModifyStudent(Student student)
         {
             string sql = " update Students set  StudentName=@StudentName, Gender=@Gender, Birthday=@Birthday, StudentIdNo=@StudentIdNo, CardNo=@CardNo, StuImage=@StuImage, Age=@Age, PhoneNumber=@PhoneNumber, StudentAddress=@StudentAddress, ClassId=@ClassId where StudentId=@StudentId";
@@ -295,5 +299,26 @@ namespace DAL
 
 
         }
+
+        public int DeleteStudent(string studentId) 
+        {
+            string sql = "delete from Students where StudentId=@StudentId";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@StudentId",studentId),
+
+            };
+
+            try
+            {
+                return SQLHelper.ExecuteNonQuery(sql, sqlParameters); 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

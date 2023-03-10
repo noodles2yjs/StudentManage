@@ -185,7 +185,37 @@ namespace StudentManager
         //删除学员对象
         private void btnDel_Click(object sender, EventArgs e)
         {
-           
+            if (this.dgvStudentList.Rows.Count == 0 || this.dgvStudentList.CurrentRow == null) return;
+            string stuId = this.dgvStudentList.CurrentRow.Cells["StudentId"].Value.ToString();
+            string stuName = this.dgvStudentList.CurrentRow.Cells["StudentName"].Value.ToString();
+
+            DialogResult dialogResult = MessageBox.Show($"是否要删除[{stuName}]","提示",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
+            try
+            {
+                studentManage.DeleteStudent(stuId);
+                MessageBox.Show("删除成功!", "提示");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("删除失败!","提示");
+                return;
+            }
+
+            // 删除后的刷新
+            this.studentList.RemoveAll(s => s.StudentId == Convert.ToInt32(stuId));
+            this.dgvStudentList.DataSource = null;
+            if (this.studentList.Count>0)
+            {
+                this.dgvStudentList.DataSource = this.studentList;
+            }
+
+
+
         }
         //姓名降序
         private void btnNameDESC_Click(object sender, EventArgs e)
@@ -249,6 +279,11 @@ namespace StudentManager
         private void tsmiModifyStu_Click(object sender, EventArgs e)
         {
             btnEidt_Click(null, null);
+        }
+
+        private void tsmidDeleteStu_Click(object sender, EventArgs e)
+        {
+            btnDel_Click(null,null);
         }
     }
 

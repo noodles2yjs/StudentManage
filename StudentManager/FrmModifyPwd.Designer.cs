@@ -116,8 +116,8 @@
             // 
             // FrmModifyPwd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(268, 173);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnModify);

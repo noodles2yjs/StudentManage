@@ -61,5 +61,10 @@ namespace BLL
         {
             return service.ModifyStudent(student);
         }
+
+        public int DeleteStudent(string studentId)
+        {
+            return service.DeleteStudent(studentId);
+        }
     }
 }

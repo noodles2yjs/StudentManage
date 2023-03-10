@@ -95,7 +95,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1329, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1690, 38);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,7 +106,7 @@
             this.toolStripSeparator3,
             this.tmiClose});
             this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
-            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(72, 34);
             this.系统ToolStripMenuItem.Text = "系统(&S)";
             // 
             // tmiModifyPwd
@@ -138,7 +138,7 @@
             this.toolStripSeparator2,
             this.tsmiManageStudent});
             this.学员管理ToolStripMenuItem.Name = "学员管理ToolStripMenuItem";
-            this.学员管理ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.学员管理ToolStripMenuItem.Size = new System.Drawing.Size(108, 34);
             this.学员管理ToolStripMenuItem.Text = "学员管理(&M)";
             // 
             // tsmiAddStudent
@@ -177,7 +177,7 @@
             this.toolStripSeparator1,
             this.tsmiQuery});
             this.成绩管理ToolStripMenuItem.Name = "成绩管理ToolStripMenuItem";
-            this.成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(99, 34);
             this.成绩管理ToolStripMenuItem.Text = "成绩管理(&J)";
             // 
             // tsmiQueryAndAnalysis
@@ -208,7 +208,7 @@
             this.toolStripSeparator7,
             this.tsmi_AQuery});
             this.tsmi_AttendanceQuery.Name = "tsmi_AttendanceQuery";
-            this.tsmi_AttendanceQuery.Size = new System.Drawing.Size(104, 24);
+            this.tsmi_AttendanceQuery.Size = new System.Drawing.Size(104, 34);
             this.tsmi_AttendanceQuery.Text = "考勤管理(&A)";
             // 
             // tsmi_Card
@@ -240,7 +240,7 @@
             this.toolStripSeparator8,
             this.tsmi_about});
             this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(75, 34);
             this.帮助HToolStripMenuItem.Text = "帮助(&H)";
             // 
             // tsmi_linkxkt
@@ -278,8 +278,8 @@
             this.lblCurrentUser});
             this.statusStrip1.Location = new System.Drawing.Point(0, 885);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1329, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1352, 26);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -306,7 +306,7 @@
             this.spContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.spContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.spContainer.Location = new System.Drawing.Point(0, 28);
+            this.spContainer.Location = new System.Drawing.Point(0, 48);
             this.spContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.spContainer.Name = "spContainer";
             // 
@@ -328,7 +328,7 @@
             this.spContainer.Panel1.Controls.Add(this.btnScoreAnalasys);
             this.spContainer.Panel1.Controls.Add(this.btnImportStu);
             this.spContainer.Panel1.Controls.Add(this.btnAddStu);
-            this.spContainer.Size = new System.Drawing.Size(1329, 857);
+            this.spContainer.Size = new System.Drawing.Size(1690, 1059);
             this.spContainer.SplitterDistance = 279;
             this.spContainer.SplitterWidth = 5;
             this.spContainer.TabIndex = 9;
@@ -336,34 +336,34 @@
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(48, 708);
+            this.label3.Location = new System.Drawing.Point(45, 708);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 4);
+            this.label3.Size = new System.Drawing.Size(230, 4);
             this.label3.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(48, 609);
+            this.label2.Location = new System.Drawing.Point(45, 609);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 4);
+            this.label2.Size = new System.Drawing.Size(230, 4);
             this.label2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(48, 518);
+            this.label1.Location = new System.Drawing.Point(45, 518);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 4);
+            this.label1.Size = new System.Drawing.Size(230, 4);
             this.label1.TabIndex = 0;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(17, 44);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.monthCalendar1.Location = new System.Drawing.Point(16, 44);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -371,10 +371,10 @@
             // 
             this.btnChangeAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeAccount.Image")));
             this.btnChangeAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangeAccount.Location = new System.Drawing.Point(180, 538);
+            this.btnChangeAccount.Location = new System.Drawing.Point(169, 538);
             this.btnChangeAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeAccount.Name = "btnChangeAccount";
-            this.btnChangeAccount.Size = new System.Drawing.Size(109, 51);
+            this.btnChangeAccount.Size = new System.Drawing.Size(102, 51);
             this.btnChangeAccount.TabIndex = 1;
             this.btnChangeAccount.Text = "账号切换";
             this.btnChangeAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -385,10 +385,10 @@
             // 
             this.btnModifyPwd.Image = ((System.Drawing.Image)(resources.GetObject("btnModifyPwd.Image")));
             this.btnModifyPwd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifyPwd.Location = new System.Drawing.Point(48, 538);
+            this.btnModifyPwd.Location = new System.Drawing.Point(45, 538);
             this.btnModifyPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModifyPwd.Name = "btnModifyPwd";
-            this.btnModifyPwd.Size = new System.Drawing.Size(109, 51);
+            this.btnModifyPwd.Size = new System.Drawing.Size(102, 51);
             this.btnModifyPwd.TabIndex = 1;
             this.btnModifyPwd.Text = "密码修改";
             this.btnModifyPwd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -399,10 +399,10 @@
             // 
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(188, 768);
+            this.btnExit.Location = new System.Drawing.Point(176, 768);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(109, 51);
+            this.btnExit.Size = new System.Drawing.Size(102, 51);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "退出系统";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -415,10 +415,10 @@
             this.btnStuManage.ForeColor = System.Drawing.Color.Black;
             this.btnStuManage.Image = ((System.Drawing.Image)(resources.GetObject("btnStuManage.Image")));
             this.btnStuManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStuManage.Location = new System.Drawing.Point(184, 302);
+            this.btnStuManage.Location = new System.Drawing.Point(172, 302);
             this.btnStuManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStuManage.Name = "btnStuManage";
-            this.btnStuManage.Size = new System.Drawing.Size(109, 51);
+            this.btnStuManage.Size = new System.Drawing.Size(102, 51);
             this.btnStuManage.TabIndex = 1;
             this.btnStuManage.Text = "学员管理";
             this.btnStuManage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -431,10 +431,10 @@
             this.btnScoreQuery.ForeColor = System.Drawing.Color.Black;
             this.btnScoreQuery.Image = ((System.Drawing.Image)(resources.GetObject("btnScoreQuery.Image")));
             this.btnScoreQuery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScoreQuery.Location = new System.Drawing.Point(48, 442);
+            this.btnScoreQuery.Location = new System.Drawing.Point(45, 442);
             this.btnScoreQuery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnScoreQuery.Name = "btnScoreQuery";
-            this.btnScoreQuery.Size = new System.Drawing.Size(109, 51);
+            this.btnScoreQuery.Size = new System.Drawing.Size(102, 51);
             this.btnScoreQuery.TabIndex = 1;
             this.btnScoreQuery.Text = "成绩浏览";
             this.btnScoreQuery.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -447,10 +447,10 @@
             this.btnCard.ForeColor = System.Drawing.Color.Black;
             this.btnCard.Image = ((System.Drawing.Image)(resources.GetObject("btnCard.Image")));
             this.btnCard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCard.Location = new System.Drawing.Point(48, 372);
+            this.btnCard.Location = new System.Drawing.Point(45, 372);
             this.btnCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(109, 51);
+            this.btnCard.Size = new System.Drawing.Size(102, 51);
             this.btnCard.TabIndex = 1;
             this.btnCard.Text = "考勤打卡";
             this.btnCard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -462,10 +462,10 @@
             this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(48, 632);
+            this.btnUpdate.Location = new System.Drawing.Point(45, 632);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 51);
+            this.btnUpdate.Size = new System.Drawing.Size(102, 51);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "系统升级";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -476,10 +476,10 @@
             // 
             this.btnGoXiketang.Image = ((System.Drawing.Image)(resources.GetObject("btnGoXiketang.Image")));
             this.btnGoXiketang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGoXiketang.Location = new System.Drawing.Point(56, 768);
+            this.btnGoXiketang.Location = new System.Drawing.Point(52, 768);
             this.btnGoXiketang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGoXiketang.Name = "btnGoXiketang";
-            this.btnGoXiketang.Size = new System.Drawing.Size(109, 51);
+            this.btnGoXiketang.Size = new System.Drawing.Size(102, 51);
             this.btnGoXiketang.TabIndex = 1;
             this.btnGoXiketang.Text = "访问官网";
             this.btnGoXiketang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -492,10 +492,10 @@
             this.btnAttendanceQuery.ForeColor = System.Drawing.Color.Black;
             this.btnAttendanceQuery.Image = ((System.Drawing.Image)(resources.GetObject("btnAttendanceQuery.Image")));
             this.btnAttendanceQuery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAttendanceQuery.Location = new System.Drawing.Point(181, 372);
+            this.btnAttendanceQuery.Location = new System.Drawing.Point(170, 372);
             this.btnAttendanceQuery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAttendanceQuery.Name = "btnAttendanceQuery";
-            this.btnAttendanceQuery.Size = new System.Drawing.Size(109, 51);
+            this.btnAttendanceQuery.Size = new System.Drawing.Size(102, 51);
             this.btnAttendanceQuery.TabIndex = 1;
             this.btnAttendanceQuery.Text = "考勤查询";
             this.btnAttendanceQuery.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -508,10 +508,10 @@
             this.btnScoreAnalasys.ForeColor = System.Drawing.Color.Black;
             this.btnScoreAnalasys.Image = ((System.Drawing.Image)(resources.GetObject("btnScoreAnalasys.Image")));
             this.btnScoreAnalasys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScoreAnalasys.Location = new System.Drawing.Point(181, 442);
+            this.btnScoreAnalasys.Location = new System.Drawing.Point(170, 442);
             this.btnScoreAnalasys.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnScoreAnalasys.Name = "btnScoreAnalasys";
-            this.btnScoreAnalasys.Size = new System.Drawing.Size(109, 51);
+            this.btnScoreAnalasys.Size = new System.Drawing.Size(102, 51);
             this.btnScoreAnalasys.TabIndex = 1;
             this.btnScoreAnalasys.Text = "成绩分析";
             this.btnScoreAnalasys.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -523,10 +523,10 @@
             this.btnImportStu.BackColor = System.Drawing.SystemColors.Control;
             this.btnImportStu.Image = ((System.Drawing.Image)(resources.GetObject("btnImportStu.Image")));
             this.btnImportStu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportStu.Location = new System.Drawing.Point(184, 632);
+            this.btnImportStu.Location = new System.Drawing.Point(172, 632);
             this.btnImportStu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnImportStu.Name = "btnImportStu";
-            this.btnImportStu.Size = new System.Drawing.Size(109, 51);
+            this.btnImportStu.Size = new System.Drawing.Size(102, 51);
             this.btnImportStu.TabIndex = 1;
             this.btnImportStu.Text = "批量导入";
             this.btnImportStu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -539,10 +539,10 @@
             this.btnAddStu.ForeColor = System.Drawing.Color.Black;
             this.btnAddStu.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStu.Image")));
             this.btnAddStu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStu.Location = new System.Drawing.Point(48, 302);
+            this.btnAddStu.Location = new System.Drawing.Point(45, 302);
             this.btnAddStu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddStu.Name = "btnAddStu";
-            this.btnAddStu.Size = new System.Drawing.Size(109, 51);
+            this.btnAddStu.Size = new System.Drawing.Size(102, 51);
             this.btnAddStu.TabIndex = 1;
             this.btnAddStu.Text = "添加学员";
             this.btnAddStu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -551,9 +551,9 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 911);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1352, 911);
             this.Controls.Add(this.spContainer);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);

@@ -212,20 +212,21 @@
             this.tsmidDeleteStu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(120, 48);
             // 
             // tsmiModifyStu
             // 
             this.tsmiModifyStu.Name = "tsmiModifyStu";
-            this.tsmiModifyStu.Size = new System.Drawing.Size(155, 22);
+            this.tsmiModifyStu.Size = new System.Drawing.Size(119, 22);
             this.tsmiModifyStu.Text = "修改学员(&M)";
             this.tsmiModifyStu.Click += new System.EventHandler(this.tsmiModifyStu_Click);
             // 
             // tsmidDeleteStu
             // 
             this.tsmidDeleteStu.Name = "tsmidDeleteStu";
-            this.tsmidDeleteStu.Size = new System.Drawing.Size(155, 22);
+            this.tsmidDeleteStu.Size = new System.Drawing.Size(119, 22);
             this.tsmidDeleteStu.Text = "删除学员(&D)";
+            this.tsmidDeleteStu.Click += new System.EventHandler(this.tsmidDeleteStu_Click);
             // 
             // groupBox1
             // 
@@ -390,8 +391,8 @@
             // 
             // FrmStudentManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1017, 669);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);

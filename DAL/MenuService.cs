@@ -8,7 +8,7 @@ namespace DAL
 {
     /// <summary>
     /// MenuList 服务类
-    /// </summary|>
+    /// </summary>
 
     public class MenuService
     {

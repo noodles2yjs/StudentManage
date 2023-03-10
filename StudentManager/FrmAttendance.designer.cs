@@ -537,8 +537,8 @@
             // 
             // FrmAttendance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1017, 669);
             this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.gp01);
@@ -559,7 +559,6 @@
             this.Name = "FrmAttendance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[考勤打卡进行中...]";
-
             ((System.ComponentModel.ISupportInitialize)(this.pbStu)).EndInit();
             this.gp01.ResumeLayout(false);
             this.gp01.PerformLayout();

@@ -10,7 +10,7 @@ namespace Models
     /// ScoreList 实体类
     /// </summary>
     [Serializable]
-    public class Score
+    public class ScoreList
     {
         public int Id { get; set; }
         public int StudentId { get; set; }
