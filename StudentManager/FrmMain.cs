@@ -82,7 +82,7 @@ namespace StudentManager
         private void tsmi_Card_Click(object sender, EventArgs e)
         {
             FrmAttendance objForm = new FrmAttendance();
-          //  OpenForm(objForm);
+            OpenNewForm(objForm);
         }
         private void btnCard_Click(object sender, EventArgs e)
         {
