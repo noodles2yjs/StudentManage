@@ -202,7 +202,7 @@ namespace StudentManager
             catch (Exception ex)
             {
 
-                MessageBox.Show("删除失败!","提示");
+                MessageBox.Show("删除失败!"+ex.Message,"提示");
                 return;
             }
 

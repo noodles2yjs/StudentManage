@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImportData));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
+            this.btnChoseExcel = new System.Windows.Forms.Button();
+            this.btnSaveToDB = new System.Windows.Forms.Button();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +44,6 @@
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnChoseExcel = new System.Windows.Forms.Button();
-            this.btnSaveToDB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,14 +52,6 @@
             this.dgvStudentList.AllowUserToAddRows = false;
             this.dgvStudentList.AllowUserToDeleteRows = false;
             this.dgvStudentList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudentList.ColumnHeadersHeight = 30;
             this.dgvStudentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.StudentName,
@@ -73,7 +65,7 @@
             this.ClassId});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
@@ -84,7 +76,7 @@
             this.dgvStudentList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
@@ -93,9 +85,35 @@
             this.dgvStudentList.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvStudentList.RowTemplate.Height = 30;
             this.dgvStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentList.Size = new System.Drawing.Size(964, 592);
+            this.dgvStudentList.Size = new System.Drawing.Size(1007, 657);
             this.dgvStudentList.TabIndex = 4;
             this.dgvStudentList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvStudentList_RowPostPaint);
+            // 
+            // btnChoseExcel
+            // 
+            this.btnChoseExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnChoseExcel.Image")));
+            this.btnChoseExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChoseExcel.Location = new System.Drawing.Point(19, 22);
+            this.btnChoseExcel.Name = "btnChoseExcel";
+            this.btnChoseExcel.Size = new System.Drawing.Size(178, 34);
+            this.btnChoseExcel.TabIndex = 16;
+            this.btnChoseExcel.Text = "从外部Excel文件导入数据 ";
+            this.btnChoseExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChoseExcel.UseVisualStyleBackColor = true;
+            this.btnChoseExcel.Click += new System.EventHandler(this.btnChoseExcel_Click);
+            // 
+            // btnSaveToDB
+            // 
+            this.btnSaveToDB.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveToDB.Image")));
+            this.btnSaveToDB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveToDB.Location = new System.Drawing.Point(213, 22);
+            this.btnSaveToDB.Name = "btnSaveToDB";
+            this.btnSaveToDB.Size = new System.Drawing.Size(115, 34);
+            this.btnSaveToDB.TabIndex = 17;
+            this.btnSaveToDB.Text = "保存到数据库 ";
+            this.btnSaveToDB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveToDB.UseVisualStyleBackColor = true;
+            this.btnSaveToDB.Click += new System.EventHandler(this.btnSaveToDB_Click);
             // 
             // StudentName
             // 
@@ -122,10 +140,13 @@
             // Age
             // 
             this.Age.DataPropertyName = "Age";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Age.DefaultCellStyle = dataGridViewCellStyle1;
             this.Age.HeaderText = "年龄";
             this.Age.Name = "Age";
             this.Age.ReadOnly = true;
-            this.Age.Width = 50;
+            this.Age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Age.Width = 80;
             // 
             // StudentIdNo
             // 
@@ -160,46 +181,21 @@
             // 
             // ClassId
             // 
+            this.ClassId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ClassId.DataPropertyName = "ClassId";
             this.ClassId.HeaderText = "班级";
             this.ClassId.Name = "ClassId";
             this.ClassId.ReadOnly = true;
-            this.ClassId.Width = 50;
-            // 
-            // btnChoseExcel
-            // 
-            this.btnChoseExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnChoseExcel.Image")));
-            this.btnChoseExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoseExcel.Location = new System.Drawing.Point(19, 22);
-            this.btnChoseExcel.Name = "btnChoseExcel";
-            this.btnChoseExcel.Size = new System.Drawing.Size(178, 34);
-            this.btnChoseExcel.TabIndex = 16;
-            this.btnChoseExcel.Text = "从外部Excel文件导入数据 ";
-            this.btnChoseExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChoseExcel.UseVisualStyleBackColor = true;
-            this.btnChoseExcel.Click += new System.EventHandler(this.btnChoseExcel_Click);
-            // 
-            // btnSaveToDB
-            // 
-            this.btnSaveToDB.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveToDB.Image")));
-            this.btnSaveToDB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveToDB.Location = new System.Drawing.Point(213, 22);
-            this.btnSaveToDB.Name = "btnSaveToDB";
-            this.btnSaveToDB.Size = new System.Drawing.Size(115, 34);
-            this.btnSaveToDB.TabIndex = 17;
-            this.btnSaveToDB.Text = "保存到数据库 ";
-            this.btnSaveToDB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveToDB.UseVisualStyleBackColor = true;
-            this.btnSaveToDB.Click += new System.EventHandler(this.btnSaveToDB_Click);
             // 
             // FrmImportData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1006, 683);
+            this.ClientSize = new System.Drawing.Size(1111, 755);
             this.Controls.Add(this.btnSaveToDB);
             this.Controls.Add(this.btnChoseExcel);
             this.Controls.Add(this.dgvStudentList);
+            this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MaximizeBox = false;
             this.Name = "FrmImportData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

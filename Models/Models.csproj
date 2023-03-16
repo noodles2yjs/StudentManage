@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Attendance.cs" />
     <Compile Include="Ext\ExtStudent.cs" />
+    <Compile Include="Ext\StudentToExcel.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="Student.cs" />

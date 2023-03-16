@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceService.cs" />
+    <Compile Include="Helper\ImportDataFromExcel.cs" />
     <Compile Include="Helper\SQLHelper.cs" />
     <Compile Include="MenuService.cs" />
     <Compile Include="Helper\OLEDBHelper.cs" />

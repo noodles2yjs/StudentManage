@@ -49,7 +49,13 @@ namespace GTY.DAL
             }
             finally { conn.Close(); }
         }
-
+        /// <summary>
+        /// 通过事务进行增删改
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="paramArrayList"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
       public  static bool ExecuteNonQueryByTrans(string sql,List<SqlParameter[]> paramArrayList )
         {
             SqlConnection conn = new SqlConnection(connString);
@@ -85,6 +91,42 @@ namespace GTY.DAL
                 }
                 conn.Close();
             
+            }
+        }
+
+        /// <summary>
+        /// 启用事务执行多条SQL语句,UpdateByTran
+        /// </summary>      
+        /// <param name="sqlList">SQL语句列表</param>      
+        /// <returns></returns>
+        public static bool UpdateByTran(List<string> sqlList)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            try
+            {
+                conn.Open();
+                cmd.Transaction = conn.BeginTransaction();   //开启事务
+                foreach (string itemSql in sqlList)//循环提交SQL语句
+                {
+                    cmd.CommandText = itemSql;
+                    cmd.ExecuteNonQuery();
+                }
+                cmd.Transaction.Commit();  //提交事务(同时自动清除事务)
+                return true;
+            }
+            catch (Exception ex)
+            {
+                if (cmd.Transaction != null)
+                    cmd.Transaction.Rollback();//回滚事务(同时自动清除事务)
+                throw new Exception("调用事务方法UpdateByTran(List<string> sqlList)时出现错误：" + ex.Message);
+            }
+            finally
+            {
+                if (cmd.Transaction != null)
+                    cmd.Transaction = null;
+                conn.Close();
             }
         }
         /// <summary>
