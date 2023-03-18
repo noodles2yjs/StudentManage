@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManage.cs" />
+    <Compile Include="MenuManage.cs" />
     <Compile Include="ScoreManage.cs" />
     <Compile Include="StudentManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

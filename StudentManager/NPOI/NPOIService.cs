@@ -92,7 +92,7 @@ namespace StudentManager.NPOI
             //设置字体
             IFont font = workBook.CreateFont();
             font.FontName = "微软雅黑";
-            font.FontHeight = 15 * 15;
+            font.FontHeight = 4*4;
             font.Color = IndexedColors.Green.Index;   //字体颜色         
             //font.Color =(short )FontColor .Red  ;
             style.SetFont(font);
@@ -106,7 +106,9 @@ namespace StudentManager.NPOI
         /// <param name="width">具体宽度值</param>
         private static void SetColumnWidth(ISheet sheet, int index, int width)
         {
-            sheet.SetColumnWidth(index, width * 256);
+            //sheet.SetColumnWidth(index, width * 256);
+            sheet.SetColumnWidth(index, width*256);
+
         }
 
         #endregion

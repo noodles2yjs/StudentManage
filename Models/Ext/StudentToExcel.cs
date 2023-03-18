@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models.Ext
 {
+    /// <summary>
+    /// 将excel中的数据导入泛型集合->dgv
+    /// </summary>
     public class StudentToExcel
     {
        // public int StudentId { get; set; } // 学号

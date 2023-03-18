@@ -19,7 +19,7 @@ namespace DAL
 
         public DataSet GetAllScoreList()
         {
-            string sql = "select Students.StudentId, StudentName,PhoneNumber, Gender, Students.ClassId,ClassName,CSharp,SQLServerDB from Students inner join StudentClass on Students.ClassId = StudentClass.ClassId inner join ScoreList on ScoreList.StudentId = Students.StudentId ";
+            string sql = "select distinct(Students.StudentId), StudentName,PhoneNumber, Gender, Students.ClassId,ClassName,CSharp,SQLServerDB from Students inner join StudentClass on Students.ClassId = StudentClass.ClassId inner join ScoreList on ScoreList.StudentId = Students.StudentId ";
 
             try
             {

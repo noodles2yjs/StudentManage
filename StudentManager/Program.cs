@@ -28,7 +28,8 @@ namespace StudentManager
             // 根据窗体返回值,判断用户是否登录成功
             if (dialogResult == DialogResult.OK )
             {
-                Application.Run(new FrmMain());
+                //Application.Run(new FrmMain());
+                Application.Run(new FrmMain_TreeView());
             }
             else
             {

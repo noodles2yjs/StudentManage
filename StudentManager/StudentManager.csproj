@@ -56,6 +56,10 @@
       <HintPath>bin\Debug\Net40\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>bin\Debug\Net40\NPOI.dll</HintPath>
     </Reference>
@@ -67,6 +71,9 @@
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>bin\Debug\Net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -83,6 +90,8 @@
   <ItemGroup>
     <Compile Include="Common\DataGridViewStyle.cs" />
     <Compile Include="Common\DataValidate.cs" />
+    <Compile Include="ExcelPrint\DataExport.cs" />
+    <Compile Include="ExcelPrint\PrintStudent.cs" />
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +127,12 @@
     </Compile>
     <Compile Include="FrmImportData.Designer.cs">
       <DependentUpon>FrmImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain_TreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain_TreeView.designer.cs">
+      <DependentUpon>FrmMain_TreeView.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -189,6 +204,9 @@
     <EmbeddedResource Include="FrmImportData.resx">
       <DependentUpon>FrmImportData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain_TreeView.resx">
+      <DependentUpon>FrmMain_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +242,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -259,6 +278,67 @@
       <Project>{83eb34e9-73ec-4af1-a238-5b136335310c}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\about.ico" />
+    <Content Include="Images\App.ico" />
+    <Content Include="Images\ATTACHED.ICO" />
+    <Content Include="Images\bMan..ico" />
+    <Content Include="Images\BOOKS01.ICO" />
+    <Content Include="Images\Cancel.ico" />
+    <Content Include="Images\CHECKMRK.ICO" />
+    <Content Include="Images\Close.ico" />
+    <Content Include="Images\CustomerOrder.ico" />
+    <Content Include="Images\DataBase.ico" />
+    <Content Include="Images\DeliveryOrder.ICO" />
+    <Content Include="Images\downLoad.ico" />
+    <Content Include="Images\exit.ico" />
+    <Content Include="Images\key_32.ico" />
+    <Content Include="Images\lklLogin.ICO" />
+    <Content Include="Images\lklLoginExit.ico" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\mainbg.png" />
+    <Content Include="Images\MngDowndown.bmp" />
+    <Content Include="Images\MngIncdown.bmp" />
+    <Content Include="Images\MngUpover.bmp" />
+    <Content Include="Images\mrp.ico" />
+    <Content Include="Images\Msg.ico" />
+    <Content Include="Images\open.ico" />
+    <Content Include="Images\people.ico" />
+    <Content Include="Images\Print.ico" />
+    <Content Include="Images\Print1.ico" />
+    <Content Include="Images\PROPS.ICO" />
+    <Content Include="Images\Purchase.ico" />
+    <Content Include="Images\Query.ico" />
+    <Content Include="Images\Save.ico" />
+    <Content Include="Images\Sells.ico" />
+    <Content Include="Images\student.ico" />
+    <Content Include="Images\SysIco.ico" />
+    <Content Include="Images\TABLE.ICO" />
+    <Content Include="Images\turn.BMP" />
+    <Content Include="Images\UserLogin.ico" />
+    <Content Include="Images\UserPsw.ico" />
+    <Content Include="Images\Users.ico" />
+    <Content Include="Images\上记录.bmp" />
+    <Content Include="Images\下记录.bmp" />
+    <Content Include="Images\保存.bmp" />
+    <Content Include="Images\修改.bmp" />
+    <Content Include="Images\关闭.bmp" />
+    <Content Include="Images\删除.bmp" />
+    <Content Include="Images\取消.bmp" />
+    <Content Include="Images\学员管理系统logo.jpg" />
+    <Content Include="Images\尾记录.bmp" />
+    <Content Include="Images\打印.BMP" />
+    <Content Include="Images\搜索.bmp" />
+    <Content Include="Images\新增.bmp" />
+    <Content Include="Images\查询选择.bmp" />
+    <Content Include="Images\计算.bmp" />
+    <Content Include="Images\首记录.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,6 +10,9 @@ using BLL;
 using Models;
 using Common;
 using System.Linq;
+using StudentManager.NPOI;
+using System.Diagnostics;
+using Models.Ext;
 
 namespace StudentManager
 {
@@ -243,7 +246,22 @@ namespace StudentManager
         //打印当前学员信息
         private void btnPrint_Click(object sender, EventArgs e)
         {
-          
+            if (this.dgvStudentList.RowCount == 0 || this.dgvStudentList.CurrentRow == null) return;
+            // 获取当前学号
+            string studentId = this.dgvStudentList.CurrentRow.Cells["StudentId"].Value.ToString();
+
+            try
+            {
+                Student student = studentManage.GetStudnetByStudentyId(studentId);
+                //调用excel模块实现打印预览
+                ExcelPrint.PrintStudent printStudent = new ExcelPrint.PrintStudent();
+                printStudent.ExecPrint(student);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("打印当前学员信息,失败! 具体原因 "+ex.Message,"提示");
+            }
         }
 
         //关闭
@@ -251,10 +269,77 @@ namespace StudentManager
         {
             this.Close();
         }
-        //导出到Excel
+        //导出到Excel 字典参数// 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            // 设置导出的列标题
 
+            Dictionary<string, string> columnName = new Dictionary<string, string> 
+            {
+                {"StudentId","学号" },
+                {"StudentName","姓名" },
+                {"Gender","性别" },
+                {"StudentIdNo","身份证号" },
+                {"Birthday","出生日期" },
+                {"PhoneNumber","手机号码" },
+                {"ClassName","所在班级" },
+            };
+
+           List<StudentDgvToExcel> list= new List<StudentDgvToExcel>();
+            for (int i = 0; i < studentList.Count; i++)
+            {
+                list.Add(new StudentDgvToExcel
+                {
+                    StudentIdNo = studentList[i].StudentIdNo,
+                    StudentName = studentList[i].StudentName,
+                    Gender = studentList[i].Gender,
+                    StudentId = studentList[i].StudentId,
+                    Birthday = studentList[i].Birthday,
+                    PhoneNumber = studentList[i].PhoneNumber,
+                    ClassName = studentList[i].ClassName,
+                });
+            }
+
+            if (this.dgvStudentList.RowCount == 0) return;
+            // 调用导出方法
+
+            // 打开另存为文件对话框
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "请选择要保存的文件路径";
+
+            // 初始化保存目录,默认exe文件目录
+            saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
+            // 设置为保存文件的类型
+            saveFileDialog.Filter = "excel文件(*.xlsx)|*.xlsx|所有文件(*.*)|*.*";
+            DialogResult dialogResult1 = saveFileDialog.ShowDialog();
+            try
+            {
+                if (dialogResult1 == DialogResult.OK)
+                {
+                    bool isSuccess = NPOIService.ExportToExcel<StudentDgvToExcel>(saveFileDialog.FileName, list, columnName, 1);
+
+                    if (isSuccess)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("导出成功! 是否打开文件", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            Process.Start(saveFileDialog.FileName);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("导出失败!", "提示");
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("导出失败! 具体原因: "+ex.Message, "提示");
+            }
         }
 
         #region 实现排序
